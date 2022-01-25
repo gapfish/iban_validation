@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-# a gem's github dependencies have to be repeated in gemfiles of apps that use
-# this gem
+# dependency inheritance is not handled by bundler for gems that are pulled
+# from github. repeat these dependencies in your gemfile when you use this gem
 gem 'iban-tools', github: 'gapfish/iban-tools'
 gem 'banking_data', github: 'gapfish/banking_data' # dependency of iban-tools
 
