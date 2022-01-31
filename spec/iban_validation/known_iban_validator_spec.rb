@@ -3,7 +3,6 @@ require 'spec_helper'
 module IbanValidation
   describe KnownIbanValidator do
     begin
-      require 'banking_data'
 
       class KnownModel
         include ActiveModel::Validations
@@ -34,8 +33,6 @@ module IbanValidation
         model = KnownModel.new 'DE15763500000036109724'
         expect(model).to be_valid
       end
-    rescue LoadError
-      pending
     end
   end
 end
